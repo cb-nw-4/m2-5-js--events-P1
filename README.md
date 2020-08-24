@@ -1,6 +1,8 @@
 # JavaScript - Events
 
-If you are unsure of what the outcome is supposed to be, you can always launch the solution to see what I did in the browser. This isn't cheating... unless you steal all of my wonderful design ideas!!! 😜
+## Setup
+
+---
 
 ## Exercise 1.0 - Warm up
 
@@ -65,6 +67,8 @@ In short, replicate (and I do mean, REWRITE it from scratch) the last exercise, 
 
 **Challenge:** Make the countdown live (update on the screen)...
 
+---
+
 ## Exercise 2.1 - Buttons!!
 
 <img src="__lecture/assets/exercise-2.1.gif" />
@@ -123,7 +127,13 @@ If the user is successful, show a congratulatory message! They've won the game!!
 
 Don't forget to take some time to make it pretty.
 
-## Exercise 3.1 - A Clock
+---
+
+<center>🟢 - Complete workshop (100%) - 🟢</center>
+
+---
+
+## Exercise 3 - A Clock
 
 Create a page that displays the current time
 
@@ -143,33 +153,3 @@ Create a page that contains a start/stop button which starts/stops a stopwatch t
 ### Bonus
 
 Make it more like an actual stopwatch where it counts the seconds and the minutes (`00:00`).
-
----
-
-<center>🟢 - Complete workshop (100%) - 🟢</center>
-
----
-
-## Exercise 3.3 (stretch) - A Timer
-
-Create a page that contains a timer where the user can enter a number of seconds, click start and the timer counts down to 0.
-
-There should be a sound announcing the end as well.
-
-For the sound file, you can use `chime.mp3` in this directory.
-
-More info on playing sounds on the web: https://www.w3schools.com/graphics/game_sound.asp
-
-### Make it look "decent"
-
-Be as creative as you like. It doesn't need to be complicated, just a little "purty."
-
-## Exercise 4 (stretch) - Create your own game!
-
-Choose one of the following games and build it!
-
-- Hangman
-- Tic-tac-toe
-- [Simon](https://youtu.be/1Yqj76Q4jJ4)
-
-Have another idea? Let's hear it! 😃
