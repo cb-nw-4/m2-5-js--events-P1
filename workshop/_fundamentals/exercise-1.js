@@ -5,9 +5,6 @@
 
 const letterCount = (arr) => {
   // Insert missing solution please
-  let count = 0;
-  arr.forEach((str) => (count += str.length));
-  return count;
 };
 
 // 2. Do a console.log to verify your function.
