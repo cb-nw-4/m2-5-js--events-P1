@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-Image: radial-gradient(circle, rgb(14, 14, 63), darkblue , DeepSkyBlue 80% ) ;
+    font-family: 'Balsamiq Sans', cursive;
+  }
+  .time-text{
+    padding : 20px;
+    color:white;
+    font-size: 45px;
+  }
+
+  .time-text span{    
+    color:gold;
+    font-weight: bold;
+    font-size: 54px;
+  }
+  .result {
+    font-size: 200px;
+    text-align: center;
+    line-height: 100vh;
+    color: deeppink;
+  }
