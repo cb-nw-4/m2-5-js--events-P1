@@ -6,6 +6,12 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
+  let newArr = arr.map(element => {
+    if (element.hasOwnProperty(key)) return element[key];
+    else return null;
+  })
+  
+  return newArr;
   // Insert missing solution please
 };
 
