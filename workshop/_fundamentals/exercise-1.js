@@ -5,6 +5,14 @@
 
 const letterCount = (arr) => {
   // Insert missing solution please
+  if (!Array.isArray(arr)) {
+    return undefined;
+  }
+
+  return arr.reduce((a, b) =>{
+    let count = typeof b === 'string' ? b.length : 0;
+    return a + count;
+  }, 0);
 };
 
 // 2. Do a console.log to verify your function.
