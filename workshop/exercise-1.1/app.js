@@ -31,14 +31,15 @@ function clickFast() {
         body.style.fontSize = '8em';
         body.style.fontWeight = 'bold'
         clearTimeout(timeoutVar);
+
     }
 }
-let span = document.createElement('span');
-span.innerText = 'Be a quicker clicker!';
-document.querySelector('body').appendChild(span);
+// let span = document.createElement('span');
+// document.querySelector('body').appendChild(span);
+// span.addEventListener('click', clickFast);
 
 let body = document.querySelector('body');
-// body.innerText = 'Be a quicker clicker!'
+body.innerText = 'Be a quicker clicker!'
 body.addEventListener('click', clickFast);
 console.log('exercise 1.1');
 
