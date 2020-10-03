@@ -13,10 +13,19 @@ let foodPairings = {
 };
 
 const getPairing = (key) => {
-  // Insert missing solution please
+  let output;
+  if (typeof key === 'string') {
+    output = foodPairings[key];
+  }
+  else {
+    return "I didn't get that!";
+  }
+  return output;
 };
 
 // 2. Do a console.log to verify your function.
+console.log(getPairing('burger'));
+console.log(getPairing(false));
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
