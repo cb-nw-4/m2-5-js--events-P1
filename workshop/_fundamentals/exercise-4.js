@@ -6,7 +6,27 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+    // Insert missing solution please
+
+    let getValues = Object.values(arr);
+
+    let nw1 = (getValues.map((ValueObj, i) => {
+        if (ValueObj[i] === key) {
+            (ValueObj[i].key)
+
+        }
+    }))
+
+    let total = 0
+    getValues.forEach((valueObj) => {
+        if (valueObj === key) {
+            console.log(getValues[valueObj]);
+        }
+    })
+
+
+
+
 };
 
 // 2. Do a console.log to verify your function.

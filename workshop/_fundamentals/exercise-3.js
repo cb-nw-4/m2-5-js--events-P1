@@ -6,14 +6,29 @@
 // - if the provided argument is not a string, return "I didn't get that!".
 
 let foodPairings = {
-  burger: "beer",
-  fish: "white wine",
-  beef: "red wine",
-  strawberries: "champagne",
+    burger: "beer",
+    fish: "white wine",
+    beef: "red wine",
+    strawberries: "champagne",
 };
 
 const getPairing = (key) => {
-  // Insert missing solution please
+    // Insert missing solution please
+    let brevage = '';
+
+    let getKeys = Object.keys(foodPairings);
+
+    if ((getKeys.filter(keyObj => keyObj === key)).length === 1) {
+        getKeys.forEach((keyObj) => {
+            if (keyObj === key) {
+                brevage = foodPairings[keyObj];
+            }
+        })
+        return brevage;
+    } else {
+        return "I didn't get that!";
+    }
+
 };
 
 // 2. Do a console.log to verify your function.
