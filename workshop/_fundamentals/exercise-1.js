@@ -11,10 +11,11 @@ const letterCount = (arr) => {
       totalCount = totalCount + strCount;
     }
   }
-  return totalCount;
+  return (totalCount);
 };
 
 // 2. Do a console.log to verify your function.
+console.log(letterCount(["crisp", "bacon"]));
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
