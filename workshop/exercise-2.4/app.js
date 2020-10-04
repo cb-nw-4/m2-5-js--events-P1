@@ -85,17 +85,16 @@ const SetTimer = ()=> {
     timer.style.display = "block";
     timer.innerText = count;
     const interval = setInterval(() => {
-       
+        
+        count--;
+        timer.innerText = count;
        
         if(count <  0)  {
             startButtons.style.display = "block";
             timer.style.display = "none";
-            clearInterval(interval);
-            
+            clearInterval(interval);           
 
-        }
-        timer.innerText = count;
-        count--;
+        }        
         
     }, 1000);
 }
@@ -104,12 +103,13 @@ const SetTimer = ()=> {
 /*main program*/
 createButtons();
 
-start.addEventListener("click", function(){
+start.addEventListener("mouseup", function(){
    // removeEventListener();
     removeButtons();
     addButtons();
-    SetResults();
     SetTimer();
+    SetResults();
+    
 });
 
 // const randomDelay = Math.floor(Math.random() * 4) + 1;
