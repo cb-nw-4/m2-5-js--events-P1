@@ -1,0 +1,26 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+button {
+    font-family : inherit;
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    font-size: 24px;    
+    font-weight: bold;
+    border: none;
+    margin: 2px 2px;
+}
+
+.button-clicked {
+    background-color: darkgreen;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
