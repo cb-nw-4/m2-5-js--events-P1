@@ -2,7 +2,9 @@ console.log("exercise 2.1");
 
 let area=document.querySelector(".main");
 area.style.margin="5px 100px 0 100px";
-//area.style.display="flex";
+area.style.display="flex";
+area.style.flexWrap="wrap";
+area.style.justifyContent="center";
 
 for(let i=1;i<=20;i++){
     let btnarr=document.createElement('button');
