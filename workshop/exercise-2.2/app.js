@@ -5,7 +5,7 @@ let arr = [];
 
 for (let i = 1; i < 21; i++) {
   arr.push(false)
-  let button = document.createElement('button')
+  const button = document.createElement('button')
   button.innerText = i
   main.appendChild(button)
   
