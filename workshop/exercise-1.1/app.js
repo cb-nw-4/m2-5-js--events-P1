@@ -34,16 +34,13 @@ function clickedFast() {
     }
 }
 
-
  //styling of result text
 result.style.color = '#ff00ff'; 
 result.style.fontSize = '250px'; 
 result.style.fontFamily = 'Patrick Hand';
-result.style.margin = '150px auto';
-result.style.textAlign = 'center';
+result.style.width = '100%';
 result.style.position = 'absolute';
-result.style.top = '150px';
-result.style.left = '250px';
-
+result.style.display = 'flex';
+result.style.justifyContent = 'center';
 
 // console.log('exercise 1.1');
