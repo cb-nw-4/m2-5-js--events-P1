@@ -7,6 +7,15 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let answer = []
+  for(let i = 0; i <= arr.length - 1; i++){
+    if(!Object.keys(arr[i]).includes(key) === true){
+      return undefined
+    } else {
+      answer.push(arr[i][key])
+    }
+  }
+  return answer;
 };
 
 // 2. Do a console.log to verify your function.

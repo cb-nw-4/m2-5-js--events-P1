@@ -4,4 +4,7 @@ const getPairing = require("../exercise-3");
 test("Exercise 3", () => {
   expect(getPairing("burger")).toBe("beer");
   // add more tests here...
+  expect(getPairing("beef")).toBe("red wine");
+  expect(getPairing("other")).toBe(undefined);
+  expect(getPairing("fish")).toBe("white wine");
 });
