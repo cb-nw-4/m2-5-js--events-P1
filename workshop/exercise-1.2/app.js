@@ -11,11 +11,10 @@ counter.innerText=range;
 let counter2=setInterval(() => {
     range=range-1;
     counter.innerText=`${range}`;
-    if(range===0){
+    if(range<0){
         clearInterval(counter2);
     }
 }, 1000);
-
 
 let result=document.querySelector("#result");
 document.body.addEventListener('click', display);
