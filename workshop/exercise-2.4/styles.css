@@ -27,6 +27,7 @@ header {
     height: 60px;
     background-color: goldenrod;
     font-size: 28px;
+    border: none;
 }
 .timer {
     font-size: 28px;
@@ -54,16 +55,22 @@ header {
 }
 
 .result {
- display: flex;
+ display:flex;
  align-items: center;
  justify-content: center;
  background-color: darkgreen;
- height: 180px;
- width: 280px;
+ height: 0px;
+ width: 0px;
  border-radius: 10px;
  font-size: 28px;
  color: white;
- box-shadow: 10px 10px 30px 10px grey;
- z-index: 1;
- display: none;
+ box-shadow: 5px 5px 10px grey;
+ z-index: 1; 
+ transition: height 0.1s ease-in-out;
+}
+
+.button-start:active {
+    border: solid 2px goldenrod;
+    background-color: grey;
+    color: goldenrod;
 }
