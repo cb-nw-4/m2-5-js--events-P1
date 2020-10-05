@@ -10,7 +10,6 @@ const NUMBERS = 20;
 for (let count = 1; count <= NUMBERS; count++) {
     const btn = document.createElement('button');
     btn.innerText = count;
-    container.appendChild(btn);
     btn.style.height = '100px';
     btn.style.width = '100px';
     btn.style.margin = '1px';
