@@ -7,6 +7,16 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let newarr=[];
+  for(let i=0;i<arr.length;i++){
+    if(key in arr[i]){
+    newarr.push(arr[i][key]);
+    }
+    else{
+      return [];
+    }
+  }
+  return newarr;
 };
 
 // 2. Do a console.log to verify your function.

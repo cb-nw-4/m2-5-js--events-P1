@@ -13,4 +13,37 @@ test("Exercise 4", () => {
     )
   ).toStrictEqual(["chris", "liv", "dave"]);
   // add more tests here...
+  //1
+  expect(
+    getValues(
+      [
+        { name: "Bob", amount: 100 },
+        { name: "Josie", amount: 45 },
+      ],
+      "amount"
+    )
+  ).toStrictEqual([100, 45]);
+
+  //2
+  expect(
+    getValues(
+      [
+        { name: "Maya", amount: 56 },
+        { name: "Monisha", amount: 32 },
+      ],
+      "name"
+    )
+  ).toStrictEqual(["Maya", "Monisha"]);
+
+  //3
+  expect(
+    getValues(
+      [
+        { name: "Mildred", age: 56 },
+        { name: "Gertrude", age: 96 },
+        { name: "Beryl", age: 72 },
+      ],
+      "name"
+    )
+  ).toStrictEqual(["Mildred", "Gertrude", "Beryl"]);
 });
