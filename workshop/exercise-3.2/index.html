@@ -2,10 +2,41 @@
 <html>
   <head>
     <title>Exercise 3.2</title>
-    <style></style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        font-size: xxx-large ;
+        font-weight: 700;
+        margin-top : 10%;
+      }
+      section{
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        display:inline-block;
+        width: 100px;
+        height: 30px;
+        margin: 1px;
+      }
+    </style>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <audio id="myAudio">
+      <source src="/workshop/exercise-3.2/chime.mp3" type="audio/mpeg">
+    </audio>
+    <div class="main"></div>
+    <section></section>
     <script src="app.js"></script>
   </body>
 </html>
+
