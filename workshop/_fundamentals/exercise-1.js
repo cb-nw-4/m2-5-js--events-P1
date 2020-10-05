@@ -5,6 +5,7 @@
 
 const letterCount = (arr) => {
   // Insert missing solution please
+  return arr.join('').length;
 };
 
 // 2. Do a console.log to verify your function.

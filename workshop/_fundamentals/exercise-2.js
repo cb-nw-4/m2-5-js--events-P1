@@ -7,11 +7,12 @@
 
 const combineArrays = (arr1, arr2) => {
   // Insert missing solution please
+  return arr1.concat(arr2).sort();
 };
 
 // 2. Do a console.log to verify your function.
 
-// 3. Test your function.
+// 3. Test your function. 
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.
 

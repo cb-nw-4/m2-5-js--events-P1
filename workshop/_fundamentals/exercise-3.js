@@ -14,6 +14,19 @@ let foodPairings = {
 
 const getPairing = (key) => {
   // Insert missing solution please
+  switch (key) {
+    case "burger":
+      return "beer";
+    case "fish":
+      return "white wine";
+    case "beef":
+      return "red wine";
+    case "strawberries":
+      return "champagne";
+    default:
+      console.log("Keep doing what you're doing");
+      break;
+  }
 };
 
 // 2. Do a console.log to verify your function.
