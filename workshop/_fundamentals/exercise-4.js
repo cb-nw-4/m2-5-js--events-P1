@@ -10,22 +10,17 @@ const getValues = (arr, key) => {
 
     let getValues = Object.values(arr);
 
-    let nw1 = (getValues.map((ValueObj, i) => {
-        if (ValueObj[i] === key) {
-            (ValueObj[i].key)
+    let result = [];
 
-        }
-    }))
 
-    let total = 0
-    getValues.forEach((valueObj) => {
-        if (valueObj === key) {
-            console.log(getValues[valueObj]);
+    getValues.forEach((element, i) => {
+        if (element[key]) {
+            result.push((element[key]));
         }
     })
 
 
-
+    return result;
 
 };
 
