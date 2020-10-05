@@ -17,24 +17,19 @@ const getPairing = (key) => {
   
   switch(key){
     case "burger":
-      console.log("beer");
-      break;
+      return "beer";
     
     case "fish":
-      console.log("white wine");
-      break;
+      return "white wine";
     
     case "beef":
-      console.log("red wine");
-      break;
+      return "red wine"
 
     case "strawberries":
-      console.log("champagne");
-      break;
+      return "champagne";
 
     default:
-      console.log("Serve me proper food!");
-      break;
+      return "Serve me proper food!";
   }
 };
 
