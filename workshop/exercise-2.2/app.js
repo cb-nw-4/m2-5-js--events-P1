@@ -33,14 +33,24 @@ for (let i = 0; i < 20; i++) {
     button.style.fontWeight = 'bold';
     button.style.fontSize = '1.4em';
 
+    // Color Change
 
+    let isGreen = false;
+
+    // if (isGreen = false) {
+    // function changeToGreen () {
+    //     button.style.backgroundColor = 'darkgreen';
+    //     }
+    // }
 
     function changeToGreen () {
         button.style.backgroundColor = 'darkgreen';
-    }
+        }
 
     button.addEventListener('click', changeToGreen);
+
 }
+
 
 
 console.log(body);
