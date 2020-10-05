@@ -6,7 +6,13 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+  if (!Array.isArray(arr)) {
+    return undefined;
+  }
+   
+  return arr.map((word) => {   
+    return key in word ? word[key] : null;
+  });
 };
 
 // 2. Do a console.log to verify your function.

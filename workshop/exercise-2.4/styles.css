@@ -1,0 +1,76 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 150px;
+    background-color:gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: lightgray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-start {
+    width: 150px;
+    height: 60px;
+    background-color: goldenrod;
+    font-size: 28px;
+    border: none;
+}
+.timer {
+    font-size: 28px;
+    color:white;
+    display:none;
+}
+
+.button-round {
+    font-family : inherit;
+    width: 50px;
+    height: 50px;
+    background-color: darkred;
+    color: white;
+    font-size: 24px;    
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    margin: 2px 2px;
+    position: absolute;
+    display: none;
+}
+
+.button-clicked {
+    background-color: darkgreen;
+}
+
+.result {
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ background-color: darkgreen;
+ height: 0px;
+ width: 0px;
+ border-radius: 10px;
+ font-size: 28px;
+ color: white;
+ box-shadow: 5px 5px 10px grey;
+ z-index: 1; 
+ transition: height 0.1s ease-in-out;
+}
+
+.button-start:active {
+    border: solid 2px goldenrod;
+    background-color: grey;
+    color: goldenrod;
+}

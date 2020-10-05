@@ -6,7 +6,16 @@
 // - if any of the values in either array is not strings, return undefined.
 
 const combineArrays = (arr1, arr2) => {
-  // Insert missing solution please
+
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return undefined;
+  }
+  
+  let newArr = [...arr1, ...arr2];
+  if (!newArr.every(el => typeof el === 'string'))
+    return undefined;
+  
+  return newArr.sort();
 };
 
 // 2. Do a console.log to verify your function.
