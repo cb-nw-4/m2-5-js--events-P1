@@ -1,50 +1,27 @@
 let area=document.querySelector('.main');
-//const newcounter=Math.floor(Math.random() * 11);  
-let btnarr=[];
+
+let btnarr=[]; //empty array: to be used to check the result
+
+//start button
 let btn=document.createElement('button');
 btn.innerText="start";
 area.appendChild(btn);
-let range=document.createElement('p');
-//range.innerText="range";
-area.appendChild(range);
-
-let resulttext=document.createElement('p');
-//resulttext.innerText="YOU WIN!";
-area.appendChild(resulttext);
-
-//styling for header
-area.style.display='flex';
-area.style.justifyContent="center";
-area.style.padding="30px";
-area.style.backgroundColor="gray";
-area.style.height="50px";
-
-//styling for start button
-btn.style.padding="15px 30px 15px 30px";
-btn.style.borderRadius="5px";
-btn.style.backgroundColor="white";
-btn.style.color="orange";
-btn.style.borderColor="orange";
 btn.addEventListener('click', startClicking);
 
-//styling for range text
-range.style.color="white";
-range.style.fontFamily="Abril Fatface";
-range.style.fontSize="3.5em";
-range.style.fontWeight="900";
+//counter display
+let range=document.createElement('p');
+area.appendChild(range);
 
-//styling for result text
-resulttext.style.position="absolute";
-resulttext.style.fontFamily="Abril Fatface";
-resulttext.style.fontSize="10em";
-resulttext.style.color="white";
-resulttext.style.top="30%";
-resulttext.style.zIndex="1";
+//result display
+let resulttext=document.createElement('p');
+area.appendChild(resulttext);
 
+//counter for timer and result checking
 let newcounter=Math.floor(Math.random() * 11);  
 let finalvalue=newcounter;
 console.log("Range="+newcounter);
 
+//start the game
 function startClicking(){
     callbuttons();
     btn.style.display="none";
@@ -58,11 +35,10 @@ function startClicking(){
         }
         newcounter--;
     }, 1000);
-    
-    
     console.log(btnarr);
 }
 
+//display the result and end
 function displayResult(){
     if(btnarr.length>=finalvalue){
         resulttext.innerText="YOU WIN!"
@@ -75,13 +51,9 @@ function displayResult(){
     }
 }
 
-
 //adding another div
 let newDiv=document.createElement('div');
 document.body.appendChild(newDiv);
-newDiv.style.margin="50px";
-newDiv.style.height="350px";
-newDiv.style.backgroundColor="gray";
 
 //make buttons. To be called when the game starts
 function callbuttons(){
@@ -104,6 +76,7 @@ function callbuttons(){
     }
 }
 
+//change colours
 function colours(event){
     let btnclick=event.target.id;
     //console.log(btnclick);
@@ -111,4 +84,37 @@ function colours(event){
     btnarr.push(btnclick);
 }
 
+//------------styling all below-----------//
+//styling for header
+area.style.display='flex';
+area.style.justifyContent="center";
+area.style.padding="30px";
+area.style.backgroundColor="gray";
+area.style.height="50px";
 
+//styling for start button
+btn.style.padding="15px 30px 15px 30px";
+btn.style.borderRadius="5px";
+btn.style.backgroundColor="white";
+btn.style.color="orange";
+btn.style.borderColor="orange";
+
+
+//styling for range text
+range.style.color="white";
+range.style.fontFamily="Abril Fatface";
+range.style.fontSize="3.5em";
+range.style.fontWeight="900";
+
+//styling for result text
+resulttext.style.position="absolute";
+resulttext.style.fontFamily="Abril Fatface";
+resulttext.style.fontSize="10em";
+resulttext.style.color="white";
+resulttext.style.top="30%";
+resulttext.style.zIndex="1";
+
+//newDiv styling
+newDiv.style.margin="50px";
+newDiv.style.height="350px";
+newDiv.style.backgroundColor="gray";
