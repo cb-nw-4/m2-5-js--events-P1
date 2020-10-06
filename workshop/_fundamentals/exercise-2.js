@@ -6,7 +6,20 @@
 // - if any of the values in either array is not strings, return undefined.
 
 const combineArrays = (arr1, arr2) => {
-  // Insert missing solution please
+  let arr3 = arr1.concat(arr2).sort();
+  let check = true;
+  arr3.forEach (element => {
+    if (typeof element === "string") check = check && true;
+    else check = false;
+  })
+  switch(check){
+  case true:
+    return arr3.sort();
+  case false:
+    return undefined;
+  }
+  //return arr3.sort();
+  //arr2.sort();
 };
 
 // 2. Do a console.log to verify your function.

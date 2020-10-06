@@ -1,8 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Roboto&display=swap" rel="stylesheet">;
     <title>Exercise 2.4</title>
-    <style></style>
+    <style>
+      body{
+        position: relative;
+      }
+
+      .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 98vw;
+        height: 90vh;
+        
+      }
+
+      .strbtn{
+        /* position: absolute;
+        left: 50%;
+        top: 50%; */
+        height: 200px;
+        width: 300px;
+        background-color: red;
+        color: white;
+        font-size: 80px;
+        border-radius: 50px;
+        font-family: 'Loved by the King', cursive;
+      }
+
+      ul{
+        list-style-type: none;
+        display: none;
+        /* width: 90vw;
+        height: 90vh; */
+      }
+
+      .button{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: darkred;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button-text{
+        color: white;
+        font-size: 80px;    
+        font-family: 'Loved by the King', cursive;
+      }
+
+      .message{
+        margin: 0px;
+        display: none;
+        font-size: 80px;  
+        color: green;  
+        font-family: 'Loved by the King', cursive;
+        top: 0%;
+      }
+
+      .message-winner{
+        display: flex;
+        margin: 0px; 
+        background : blue;   
+        font-family: 'Loved by the King', cursive;
+        color : yellow;
+        font-Size : 300px;
+        border-Radius : 20px;
+        top : 25%;
+        padding-Left : 200px;
+        padding-Right : 200px;
+      }
+
+      .message-loser{
+        display: flex;
+        margin: 0px; 
+        background : purple;   
+        font-family: 'Loved by the King', cursive;
+        color : red;
+        font-Size : 100px;
+        border-Radius : 20px;
+        top : 25%;
+        padding-Left : 100px;
+        padding-Right : 100px;
+      }
+
+    </style>
   </head>
   <body>
     <div class="main" id="main"></div>
