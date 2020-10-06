@@ -17,6 +17,7 @@ for (let i = 0; i < 20; i++) {
     button.type = 'button';
     button.value = [i+1];
     document.querySelector('.main').appendChild(button);
+    button.setAttribute('id', `button-${i+1}`);
 
     //CSS
     button.style.width = '90px';
@@ -43,5 +44,7 @@ for (let i = 0; i < 20; i++) {
 
     button.addEventListener('click', changeToGreen);
 }
+
+
 
 console.log(main);
