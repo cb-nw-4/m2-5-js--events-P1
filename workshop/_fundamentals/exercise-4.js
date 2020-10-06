@@ -5,9 +5,20 @@
 
 // - If the provided key is not any of the objects, return null for that value;
 
+
 const getValues = (arr, key) => {
-  // Insert missing solution please
-};
+  let newArr = [];
+  arr.forEach(function(element) {
+    let result = element[key];
+    if (result === undefined) {
+      newArr.push("null");
+    } else {
+      newArr.push(result);
+    }
+  });
+  console.log(newArr);
+  return newArr;
+}
 
 // 2. Do a console.log to verify your function.
 
