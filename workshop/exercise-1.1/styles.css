@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image:radial-gradient(circle, black, darkblue,blue) ;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+}
+
+.result {
+    font-size:350px ;
+    color: rgb(236, 87, 224);
+    text-align: center;
+}
