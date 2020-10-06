@@ -14,6 +14,11 @@ main.style.justifyContent = 'center';
 main.style.alignContent = 'center';
 main.style.width = '1200px';
 
+//HTML STYLE
+//let style = document.createElement('style');
+let head = document.querySelector('head');
+//document.querySelector('head').appendChild(style);
+
 
 //Create 20 buttons
 for (let i = 0; i < 20; i++) {
@@ -21,37 +26,38 @@ for (let i = 0; i < 20; i++) {
     button.type = 'button';
     button.value = [i+1];
     document.querySelector('.main').appendChild(button);
+    button.setAttribute('id', `button-${i+1}`);
+    button.setAttribute('class', 'btn');
 
-    //CSS
-    button.style.width = '150px';
-    button.style.height = '150px';
-    button.style.margin = '4px';
-    button.style.backgroundColor = 'darkred';
-    button.style.border = '0';
 
-    button.style.color = 'white';
-    button.style.fontWeight = 'bold';
-    button.style.fontSize = '1.4em';
+    function green() {
+        document.getElementById(`button-${i+1}`).classList.toggle('toggleGreen');
+    }
+button.addEventListener('click', green);
+
+//CSS
+    // button.style.width = '150px';
+    // button.style.height = '150px';
+    // button.style.margin = '4px';
+    // button.style.backgroundColor = 'darkred';
+    // button.style.border = '0';
+
+    // button.style.color = 'white';
+    // button.style.fontWeight = 'bold';
+    // button.style.fontSize = '1.4em';
+
 
     // Color Change
 
-    let isGreen = false;
-
-    // if (isGreen = false) {
     // function changeToGreen () {
     //     button.style.backgroundColor = 'darkgreen';
     //     }
-    // }
 
-    function changeToGreen () {
-        button.style.backgroundColor = 'darkgreen';
-        }
-
-    button.addEventListener('click', changeToGreen);
-
+    // button.addEventListener('click', changeToGreen);
+    //document.getElementById(`button-${i+1}`).classList.toggle(changeToRed);
 }
 
 
-
+console.log(head);
 console.log(body);
 console.log(main);
