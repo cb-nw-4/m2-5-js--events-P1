@@ -1,7 +1,7 @@
 const container = document.querySelector('.main');
 
 const NUMBERS = 20;
-for (let count = 0; count < NUMBERS; count++) {
+for (let count = 1; count <= NUMBERS; count++) {
     const btn = document.createElement('button');
     btn.innerText = count;
     container.appendChild(btn);
