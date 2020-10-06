@@ -2,10 +2,77 @@
 <html>
   <head>
     <title>Exercise 2.4</title>
-    <style></style>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(97, 3, 3);
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+        background-image: linear-gradient(rgb(7, 75, 1) 60%, rgb(0, 46, 2));
+        font-family: 'Fredoka One', cursive;
+        font-size: 3rem;
+        color: yellow;
+      }
+
+      .board {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 520px;
+        height: 520px;
+        margin: 50px auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px black;
+        background-color: olivedrab;
+      }
+
+      .start-button {
+        transition: opacity 0.5s ease-in-out;
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5rem;
+        background-color: rgb(0, 153, 255);
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        padding: 5px 20px;
+      }
+
+      .start-button-active {
+        opacity: 0;
+      }
+
+      .button-transition {
+        animation: colour-transition 0.3s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes colour-transition {
+        0% {
+          transform: scale(2);
+          background-color: fuchsia;
+        }
+        100% {
+          background-color: darkgreen;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <div class="main" id="main">
+      <div class="header">
+        <button class="start-button">Start</button>
+      </div>
+      <div class="board"></div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
