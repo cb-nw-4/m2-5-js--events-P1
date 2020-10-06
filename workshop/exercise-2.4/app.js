@@ -109,7 +109,7 @@ const gameBegin = () => {
 
         button.addEventListener('click', (e) => {
             if (flags[i]) {
-                (e.currentTarget.style.backgroundColor = '#B22222');
+                (e.currentTarget.style.backgroundColor = '#2E8B57');
 
                 flags[i] = false;
             } else {
