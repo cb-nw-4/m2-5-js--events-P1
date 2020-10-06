@@ -58,11 +58,25 @@ getTimer.addEventListener("click", () => {
         button.style.backgroundColor = "crimson";
         arr[i] = false;
       }
+      if (arr.every(el => el === true) && getCountDown.innerText > 0){
+        document.querySelector('.win').style.display = 'flex'
+      }
+      else if (getCountDown.innerText == 0){
+        document.querySelector('.lose').style.display = 'flex'
+      }
     });
   });
+  
 });
 
+
+
+
 const getAllButtons = document.querySelectorAll(".newBtn");
+
+
+
+
 // if (getAllButtons.every((button) => {button.style.backgroundColor === 'green'})) {
 //   console.log('you won!')
 // }

@@ -43,8 +43,9 @@ nav {
   height: 50%;
   position: relative;
   background-color: whitesmoke;
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .newBtn {
@@ -55,4 +56,32 @@ nav {
   font-size: larger;
   background-color: crimson;
   border-radius: 50%;
+}
+
+
+.win {
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 30%;
+  height: 30%;
+  background-color: green;
+  color: white;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.lose {
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 30%;
+  height: 30%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
