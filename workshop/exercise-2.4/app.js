@@ -4,7 +4,8 @@ let btnarr=[]; //empty array: to be used to check the result
 
 //start button
 let btn=document.createElement('button');
-btn.innerText="start";
+btn.innerText="Start clicking!";
+btn.setAttribute('class', "hoverbutton");
 area.appendChild(btn);
 btn.addEventListener('click', startClicking);
 
@@ -14,6 +15,7 @@ area.appendChild(range);
 
 //result display
 let resulttext=document.createElement('p');
+resulttext.setAttribute('id', 'resultpad');
 area.appendChild(resulttext);
 
 //counter for timer and result checking
@@ -41,11 +43,18 @@ function startClicking(){
 //display the result and end
 function displayResult(){
     if(btnarr.length>=finalvalue){
-        resulttext.innerText="YOU WIN!"
+        resulttext.style.visibility="visible";
+        resulttext.innerText="YOU WIN!";
+        endListeners();
     }
     else{
-        resulttext.innerText="YOU LOSE!"
+        resulttext.style.visibility="visible";
+        resulttext.innerText="YOU LOSE!";
+        endListeners();
     }
+}
+
+function endListeners(){
     for(let i=1;i<=newcounter;i++){
         document.getElementById(`btn-${i}`).removeEventListener('click',colours);
     }
@@ -89,14 +98,14 @@ function colours(event){
 area.style.display='flex';
 area.style.justifyContent="center";
 area.style.padding="30px";
-area.style.backgroundColor="gray";
+area.style.backgroundColor="rgb(194, 194, 194)";
 area.style.height="50px";
 
 //styling for start button
 btn.style.padding="15px 30px 15px 30px";
 btn.style.borderRadius="5px";
-btn.style.backgroundColor="white";
-btn.style.color="orange";
+btn.style.backgroundColor="orange";
+btn.style.color="white";
 btn.style.borderColor="orange";
 
 
@@ -107,14 +116,20 @@ range.style.fontSize="3.5em";
 range.style.fontWeight="900";
 
 //styling for result text
+resulttext.style.padding="100px";
+resulttext.style.backgroundColor="orange";
+resulttext.style.visibility="hidden";
 resulttext.style.position="absolute";
 resulttext.style.fontFamily="Abril Fatface";
-resulttext.style.fontSize="10em";
+resulttext.style.fontSize="5em";
 resulttext.style.color="white";
 resulttext.style.top="30%";
 resulttext.style.zIndex="1";
+resulttext.style.borderRadius="8px";
 
 //newDiv styling
 newDiv.style.margin="50px";
 newDiv.style.height="350px";
-newDiv.style.backgroundColor="gray";
+newDiv.style.backgroundColor="rgb(194, 194, 194)";
+newDiv.style.boxShadow="1px 0px 16px -2px rgba(0,0,0,0.75)";
+newDiv.style.borderRadius="8px";
