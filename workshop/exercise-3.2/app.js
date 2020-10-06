@@ -36,7 +36,7 @@ let watchOn=false;
 //start function
 function watchStart(){
     if(!watchOn){
-        interval=setInterval(update, 100);//update every 10 ms
+        interval=setInterval(update, 100);//update every 100 ms
         offset=Date.now();//gets the time in ms
         watchOn=true;
     }
