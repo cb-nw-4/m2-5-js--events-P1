@@ -7,6 +7,16 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let keyCheck = arr.every ((element)=> {return element[key]!== undefined; }); 
+  if (keyCheck) { 
+    let newArr = arr.map ((element)=> { 
+      return element[key];
+    });
+    console.log(newArr); 
+    return newArr;
+  } else { 
+    return null;
+  }; 
 };
 
 // 2. Do a console.log to verify your function.
