@@ -101,41 +101,37 @@ function onclick (event) {
     }; 
     let buttons = document.querySelectorAll('button');
     console.log(buttons);
-    timer = setTimeout(()=>{
-        section2.appendChild(resultButton);
-        resultButton.innerText=("You Lose!!");
-        resultButton.style.backgroundColor="red";
-        buttons.forEach ((element)=> { 
-            element.removeEventListener("click",buttonChangeColor);
-        }); 
-    },5000); 
-    let n=6;
-    countDownTimer = setTimeout(countDown,1000);
-    function countDown() {
-        n--;
-        if(n > 0){
-        setTimeout(countDown,1000);
-        }; 
-        console.log(n);
-        section1.innerText=(n);
-    }; 
-    }; 
+    let countdown = 5; 
+    timer = setInterval(()=>{
+        section1.innerText=(countdown);
+        if(countdown===0) { 
+            section2.appendChild(resultButton);
+            resultButton.innerText=("You Lose!!");
+            resultButton.style.backgroundColor="red";
+            buttons.forEach ((element)=> { 
+                element.removeEventListener("click",buttonChangeColor);
+            }); 
+            clearInterval(timer);
+        }
+        countdown--; 
+    },1000); 
+}; 
     
 
-    function buttonChangeColor (event) { 
-        if(event.currentTarget.className === "red") { 
-            event.currentTarget.style.backgroundColor="#006400";
-            event.currentTarget.setAttribute("class","green");
-            buttonColorChangeCount++;
-            console.log(buttonColorChangeCount,"green");
-            if(buttonColorChangeCount === numberOfButtons) { 
-                console.log(buttonColorChangeCount, numberOfButtons, "all clicked");
-                clearTimeout(timer);
-                clearTimeout(countDownTimer);
-                section2.appendChild(resultButton);
-                resultButton.innerText=("You Win!!");
-                resultButton.style.backgroundColor="green";
-            };
+function buttonChangeColor (event) { 
+    if(event.currentTarget.className === "red") { 
+        event.currentTarget.style.backgroundColor="#006400";
+        event.currentTarget.setAttribute("class","green");
+        buttonColorChangeCount++;
+        console.log(buttonColorChangeCount,"green");
+        if(buttonColorChangeCount === numberOfButtons) { 
+            console.log(buttonColorChangeCount, numberOfButtons, "all clicked");
+            clearTimeout(timer);
+            clearTimeout(countDownTimer);
+            section2.appendChild(resultButton);
+            resultButton.innerText=("You Win!!");
+            resultButton.style.backgroundColor="green";
         };
-    }; 
+    };
+}; 
 
