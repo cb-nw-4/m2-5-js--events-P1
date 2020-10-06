@@ -1,11 +1,16 @@
 //clock
 
 let area= document.querySelector(".main");
-area.style.position="flex";
+area.style.display="flex";
 area.style.justifyContent="center";
+area.style.marginTop="15%";
 
 let dateArea=document.createElement('p');
 area.appendChild(dateArea);
-dateArea.innerText=new Date();
+let event=setInterval(() => {
+    let displaydate=new Date();
+    dateArea.innerText=`${displaydate}`;
+}, 1000);
+
 dateArea.style.fontFamily= "Orbitron";
 dateArea.style.fontSize="2em";
