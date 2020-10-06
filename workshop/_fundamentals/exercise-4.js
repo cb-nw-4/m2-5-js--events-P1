@@ -6,7 +6,22 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+    // Insert missing solution please
+
+    let getValues = Object.values(arr);
+
+    let result = [];
+
+
+    getValues.forEach((element, i) => {
+        if (element[key]) {
+            result.push((element[key]));
+        }
+    })
+
+
+    return result;
+
 };
 
 // 2. Do a console.log to verify your function.
