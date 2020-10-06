@@ -2,6 +2,7 @@ let ul = document.createElement("ul");
 let main = document.querySelector("div");
 main.appendChild(ul);
 let time = 10;
+let gameFin = 0;
 let score = [];
 let tp = document.createElement("p");
 tp.innerHTML = `You have ${time} seconds left!`;
@@ -25,11 +26,14 @@ function initgame() {
         if (time === 0){
             clearInterval(timer);
             tp.innerHTML = `You ran out of time! Try again!`;
-            tp.className = "message-loser";}
+            tp.className = "message-loser";
+            gameFin = 1;
+            }
         if (score.reduce(scoreTot, 0) === rand) {
             clearInterval(timer);
             tp.innerHTML = `You WIN!`;
             tp.className = "message-winner";
+            gameFin = 1;
             }
         
         function scoreTot(total, num) {
@@ -57,25 +61,24 @@ function initgame() {
         element.style.top=Math.floor(Math.random() * 90)+10+"%";
     })
 
-    newArr.forEach((element,i) => {element.addEventListener("click", () => {
+    newArr.forEach((element,i) => {element.addEventListener("click", function redGreen() 
+     {
+        if (gameFin === 0){
         if (score[i]===0){
-            element.style.backgroundColor = "green";
-            score[i] = 1;
-            console.log(score);
-        }
-        else if (score[i]===1)
+             element.style.backgroundColor = "green";
+             score[i] = 1;
+             console.log(score);
+         }
+         else if (score[i]===1)
         {
-            element.style.backgroundColor = "darkred";
-            score[i] = 0;
-            console.log(score);
-        }
-    })})
+             element.style.backgroundColor = "darkred";
+             score[i] = 0;
+             console.log(score);
+         }
+        } 
+     })});
 
-
-};
-
-
-
-
+}
 
 document.querySelector("button").addEventListener("click", initgame);
+
