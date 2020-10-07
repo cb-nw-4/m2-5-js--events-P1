@@ -7,9 +7,28 @@
 
 const combineArrays = (arr1, arr2) => {
   // Insert missing solution please
-};
+  const newArr = [...arr1, ...arr2]
+  // console.log(newArr)
+  let checkedArr = newArr.map((el) => {
+    if (typeof el !== 'string'){
+      return undefined
+    }
+    else {
+      return el
+    }
+  })
 
+  if (checkedArr.includes(undefined)){
+    return undefined
+  }
+  else{
+    return checkedArr.sort()
+  }
+
+};
 // 2. Do a console.log to verify your function.
+
+
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.

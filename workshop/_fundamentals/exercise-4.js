@@ -7,8 +7,24 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  const newArr = arr.map((el) => {
+    if (el[key] === undefined) {
+      return null;
+    } else {
+      return el[key];
+    }
+  });
+  return newArr;
 };
 
+getValues(
+  [
+    { name: "chris", age: 23 },
+    { name: "liv", age: 36 },
+    { name: "dave", age: 43 },
+  ],
+  "age"
+);
 // 2. Do a console.log to verify your function.
 
 // 3. Test your function.
