@@ -7,6 +7,14 @@
 
 const combineArrays = (arr1, arr2) => {
   // Insert missing solution please
+  let typeCheck1 = arr1.every ((element)=> { return typeof element === "string";}); 
+  let typeCheck2 = arr2.every ((element)=> { return typeof element === "string";}); 
+  if (typeCheck1 && typeCheck2) { 
+    let newArr = [...arr1, ...arr2];
+    return newArr.sort(); 
+  } else { 
+    return undefined;
+  };
 };
 
 // 2. Do a console.log to verify your function.
