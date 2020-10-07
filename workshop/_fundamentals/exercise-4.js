@@ -6,7 +6,7 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+  return arr.map(element => element[key]);
 };
 
 // 2. Do a console.log to verify your function.
