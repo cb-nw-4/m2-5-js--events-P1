@@ -6,7 +6,14 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+
+  let outputArray = arr.map(function(person){
+    if(person[key]==undefined){
+      return null;
+    }
+    return person[key];
+  });
+  return outputArray;
 };
 
 // 2. Do a console.log to verify your function.
