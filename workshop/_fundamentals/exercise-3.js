@@ -14,7 +14,10 @@ let foodPairings = {
 
 const getPairing = (key) => {
   // Insert missing solution please
+  return foodPairings[key];
 };
+
+console.log(getPairing('burger'));
 
 // 2. Do a console.log to verify your function.
 

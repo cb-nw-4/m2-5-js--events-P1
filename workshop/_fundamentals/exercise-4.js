@@ -7,9 +7,19 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let newArray = arr.map((element) => {
+    if (element[key]) {
+      return element[key];
+    } else {
+      return null;
+    }
+  })
+  return newArray;
 };
 
 // 2. Do a console.log to verify your function.
+
+console.log(getValues([{name: 'chris', age: 23}, {name: 'liv', age: 36}, {name: 'dave', age: 43}], ('no')));
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
