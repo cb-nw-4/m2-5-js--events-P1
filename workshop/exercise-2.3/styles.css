@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    width: 95vw;
+    height: 600px;
+} 
+
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* border: none; */
+    color: white;
+    background-color: darkred;
+    font-size: 30px;
+}
+
