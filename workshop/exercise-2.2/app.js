@@ -17,7 +17,6 @@ for (let i = 1; i < 21; i++) {
     button.style.backgroundColor = "darkred";
     button.setAttribute("class","red");
     button.addEventListener("click", clickButton)
-    // main.appendChild(document.createElement("button")).innerText = `${i}`
 }
 
 function clickButton(event){
@@ -29,13 +28,3 @@ function clickButton(event){
         event.currentTarget.setAttribute("class", "red");
     }
 }
-
-
-
-// const redButton = document.querySelectorAll("button")
-// redButton.forEach(button => {
-//     button.addEventListener('click' , () => {
-//         if 
-//         button.style = 'background-color: darkgreen'
-//     })
-// })
