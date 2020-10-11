@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 320px;
+    margin: 100px;
+    
+} 
+
+button {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: darkred;
+    color:white;
+    font-size: 50px;
+}
+
+
