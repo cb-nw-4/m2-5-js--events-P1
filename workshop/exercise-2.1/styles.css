@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: blue;
 }
 
 .main {
@@ -17,15 +16,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 800px;
-    background-color: violet;
+    width: 750px;
+    height: 320px;
+    margin: 100px;
+    
 } 
 
 button {
     width: 100px;
     height: 100px;
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
+    border-radius: 5px;
     background-color: darkred;
     color:white;
     font-size: 50px;
