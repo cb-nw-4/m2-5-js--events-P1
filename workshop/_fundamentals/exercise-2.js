@@ -6,10 +6,16 @@
 // - if any of the values in either array is not strings, return undefined.
 
 const combineArrays = (arr1, arr2) => {
-  // Insert missing solution please
+ let combinedArr = arr1.concat(arr2);
+
+  if (!combinedArr.every(word => typeof word === "string")) {
+   return undefined;
+  }
+  return combinedArr.sort();
 };
 
 // 2. Do a console.log to verify your function.
+console.log(combineArrays(["a", "b", "t"], ["z", "f"]));
 
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.

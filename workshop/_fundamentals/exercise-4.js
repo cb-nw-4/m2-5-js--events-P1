@@ -7,7 +7,16 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+ 
+  return arr.map((a) => {
+    if (key in a) {
+      return a[key];
+    } else {
+      return null;
+    }
+  });
 };
+
 
 // 2. Do a console.log to verify your function.
 
