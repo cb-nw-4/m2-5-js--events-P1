@@ -1,0 +1,17 @@
+.button-style {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    border: none;
+    outline: none;
+}
+
+.button-not-clicked {
+    background: darkred;
+}
+
+.button-clicked {
+    background: darkgreen;
+}
