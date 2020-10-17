@@ -5,6 +5,12 @@
 
 const letterCount = (arr) => {
   // Insert missing solution please
+  let answer = 0
+  arr.forEach(function (item){
+    answer += item.length 
+  })
+  return answer  
+  
 };
 
 // 2. Do a console.log to verify your function.
