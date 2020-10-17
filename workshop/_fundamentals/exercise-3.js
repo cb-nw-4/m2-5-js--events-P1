@@ -13,6 +13,12 @@ let foodPairings = {
 };
 
 const getPairing = (key) => {
+
+ if(typeof key == 'string'){
+  return foodPairings[key]
+ }else{
+   return "I didn't get that!"
+ }
   // Insert missing solution please
 };
 

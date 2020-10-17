@@ -54,6 +54,8 @@ const pokemonNames = [
 ];
 ```
 
+pokemonNames.forEach();
+let num = num 
 ```
 1. mukdip
 2. bulbasaur

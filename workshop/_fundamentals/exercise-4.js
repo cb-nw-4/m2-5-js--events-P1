@@ -7,6 +7,18 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+
+const getAges = arr.map(function(element){
+  return element[key]
+})
+
+  if (getAges.includes(undefined)){
+    return null
+  }else{
+    return getAges
+  }
+  
+
 };
 
 // 2. Do a console.log to verify your function.
