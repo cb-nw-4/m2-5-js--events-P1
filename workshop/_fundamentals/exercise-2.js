@@ -6,8 +6,14 @@
 // - if any of the values in either array is not strings, return undefined.
 
 const combineArrays = (arr1, arr2) => {
-  // Insert missing solution please
-};
+  let newArr = arr1.concat(arr2);
+  console.log(newArr);
+  let sorted = newArr.sort();
+  console.log(sorted);
+  return sorted;
+}
+
+
 
 // 2. Do a console.log to verify your function.
 

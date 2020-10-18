@@ -12,5 +12,39 @@ test("Exercise 4", () => {
       "name"
     )
   ).toStrictEqual(["chris", "liv", "dave"]);
-  // add more tests here...
+
+  expect(
+    getValues(
+      [
+        { pet: "fluffy", animal: "dog" },
+        { pet: "whiskers", aniaml: "cat" },
+        { pet: "hopper", animal: "rabbit" },
+      ],
+      "pet"
+    )
+  ).toStrictEqual(["fluffy", "whiskers", "hopper"]);
+
+  expect(
+    getValues(
+      [
+        { person: "ann", age: 19 },
+        { person: "bob", age: 22 },
+        { person: "sue", age: 23 },
+        { person: "dee", age: 18 },
+      ],
+      "age"
+    )
+  ).toStrictEqual([19, 22, 23, 18]);
+
+  expect(
+    getValues(
+      [
+        { city: "Los Angeles", state: "California" },
+        { city: "Spokane", country: "USA" },
+        { city: "Eugene", state: "Oregon" },
+      ],
+      "country"
+    )
+  ).toStrictEqual(["null", "USA", "null"]);
+  
 });
