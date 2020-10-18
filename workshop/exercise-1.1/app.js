@@ -1,4 +1,4 @@
-// Exercise 1.1
+// Exercise 1.1 COMPLETE
 // ------------
 let body = document.querySelector("body");
 let result = document.querySelector(".result");
