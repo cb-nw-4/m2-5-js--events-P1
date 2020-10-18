@@ -27,8 +27,11 @@ buttonContainer.style.width = "70%";
 buttonContainer.style.height = "90%";
 buttonContainer.style.margin = "20px";
 buttonContainer.style.backgroundColor = "lightgrey";
+buttonContainer.style.display = "flex";
+buttonContainer.style.justifyContent = "center";
+buttonContainer.style.alignItems = "center";
 
-const startButton = document.createElement("button");
+const startButton = document.createElement("div");
 headerBar.appendChild(startButton);
 startButton.style.padding = "20px 40px 20px 40px";
 startButton.style.margin = "5px";
@@ -39,35 +42,57 @@ startButton.style.borderRadius = "5px";
 startButton.style.border = "2px solid black";
 startButton.innerText = "START";
 
-let numberOfButtons = Math.floor(Math.random() * 10);
+const result = document.createElement("div");
+buttonContainer.appendChild(result);
+result.style.width = "200px";
+result.style.height = "150px";
+result.style.fontSize = "40px";
+result.style.fontWeight = "bold";
+result.style.display = "flex";
+result.style.justifyContent = "center";
+result.style.alignItems = "center";
+result.style.color = "white";
+result.style.borderRadius = "5px";
 
-let buttons = document.querySelectorAll("button");
+let numberOfButtons = Math.floor((Math.random() * 10) + 1);
 
 startButton.addEventListener('click', function(startGame) {
     startButton.style.display = "none";
     buttonContainer.style.position = "relative";
     for (let i = 1; i <= numberOfButtons; i++) {
-        let button = document.createElement("button");
-        buttonContainer.appendChild(button);
-        button.innerText = `${i}`;
-        button.style.width = "40px";
-        button.style.height = "40px";
-        button.style.borderRadius = "50%";
-        button.style.backgroundColor = "firebrick";
-        button.style.color = "white";
-        button.style.fontSize = "20px";
-        button.style.position = "absolute";
+        let roundButton = document.createElement("button");
+        buttonContainer.appendChild(roundButton);
+        roundButton.innerText = `${i}`;
+        roundButton.style.width = "40px";
+        roundButton.style.height = "40px";
+        roundButton.style.borderRadius = "50%";
+        roundButton.style.backgroundColor = "firebrick";
+        roundButton.style.color = "white";
+        roundButton.style.fontSize = "20px";
+        roundButton.style.position = "absolute";
+        roundButton.style.margin= "20px";
         let leftPosition = (Math.floor(Math.random() * 90));
         let topPosition = (Math.floor(Math.random() * 90));
-        button.style.left = `${leftPosition}%`;
-        button.style.top = `${topPosition}%`;
+        roundButton.style.left = `${leftPosition}%`;
+        roundButton.style.top = `${topPosition}%`;
         function changeColor() {
-            button.style.backgroundColor = "green";
+            roundButton.style.backgroundColor = "green";
+            greenButtons.push(roundButton)
         };
-        button.addEventListener('click', changeColor);
+        roundButton.addEventListener('click', changeColor);
         setTimeout(function() {
-            button.removeEventListener('click', changeColor);
+            roundButton.removeEventListener('click', changeColor);
+            if (numberOfButtons === greenButtons.length) {
+                result.style.backgroundColor = "green";
+                result.innerText = "You win!";
+                result.style.zIndex = "1";
+            } else {
+                result.style.backgroundColor = "red";
+                result.innerText = "You lose!"
+                result.style.zIndex = "1";
+            }
         }, 5000);
+
     };
 
     let total = 6;
@@ -80,26 +105,8 @@ startButton.addEventListener('click', function(startGame) {
     }, 1000);
 });
 
-let result = setInterval(() => {
-    let allButtons = document.querySelectorAll(button);
-    if (allButtons.style.backgroundColor === "green") {
-        const win = document.createElement("div");
-        win.style.width = "70px";
-        win.style.height = "50px";
-        win.style.backgroundColor = "forestgreen";
-        win.innerText = "You win!";
-        win.style.zIndex = "1";
-        headerBar.appendChild(win);
-    } else {
-        const lose = document.createElement("div");
-        lose.style.width = "70px";
-        lose.style.height = "50px";
-        lose.style.backgroundColor = "red";
-        lose.innerText = "You lose"
-        lose.style.zIndex = "1";
-        headerBar.appendChild(lose);
-    }
-}, 1000);
+let buttons = document.querySelectorAll("roundButton");
 
+let greenButtons = [];
 
 
